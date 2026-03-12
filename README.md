@@ -133,3 +133,4 @@ El repositorio incluye [`ci.yml`](./.github/workflows/ci.yml) para validar `lint
   - `API_BASE_URL=https://dog.ceo/api`
   - `RATE_LIMIT_MAX=100`
   - `ALLOWED_ORIGIN=https://<tu-frontend-vercel>.vercel.app`
+  - si configuras multiples origenes, separalos por comas y evita el slash final

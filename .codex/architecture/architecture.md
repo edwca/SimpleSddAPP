@@ -53,6 +53,7 @@ Principios:
 - Tipos compartidos para contratos de API
 - La UI asume al backend como unico punto de entrada a datos externos
 - La feature `breeds` se simplifica a una vista `spotlight` en lugar de tabs y grillas extensas
+- La consulta historica conserva el dato previo durante refetch para evitar parpadeos bruscos entre selecciones
 
 ## Arquitectura Backend
 

@@ -15,6 +15,7 @@ Construir una aplicacion web que permita explorar razas de perros desde una sola
 - Listar razas de perros en un sidebar lateral fijo en desktop y drawer en mobile
 - Buscar razas por nombre, id o subrazas desde un `Autocomplete`
 - Seleccionar una raza y visualizar una sola imagen representativa servida por el backend
+- Mostrar la imagen principal con un recorte uniforme y una escala mas compacta para evitar desbordes visuales
 - Consultar la historia de la raza en la misma vista principal, sin tabs separados
 - Ampliar la imagen principal en un dialogo modal
 - Descargar la imagen representativa
@@ -30,6 +31,7 @@ Construir una aplicacion web que permita explorar razas de perros desde una sola
 - El sistema debe obtener la historia de la raza seleccionada desde el backend
 - El sistema debe permitir descargar la imagen representativa activa
 - El sistema debe permitir descargar un PDF por raza desde la interfaz principal
+- El sistema debe mostrar un mensaje introductorio breve y mas interesante dentro de la tarjeta visual de la raza activa
 - El frontend no debe consumir directamente servicios externos
 - La aplicacion debe exponer endpoints internos para razas, imagenes, imagen destacada, historia y PDF
 
@@ -48,6 +50,6 @@ Construir una aplicacion web que permita explorar razas de perros desde una sola
 - La interfaz debe priorizar simplicidad, lectura rapida y foco en una sola raza a la vez
 - El sidebar debe facilitar encontrar una raza incluso dentro de un catalogo grande
 - La zona principal debe destacar la raza activa, su imagen principal y las acciones principales
-- Los estados de carga deben evitar saltos bruscos y mostrar progreso visible
+- Los estados de carga deben evitar saltos bruscos, conservar contexto cuando sea posible y mostrar progreso visible
 - La aplicacion debe comportarse correctamente en desktop y mobile
 - La descarga de imagen y PDF no deben romper el flujo principal de exploracion

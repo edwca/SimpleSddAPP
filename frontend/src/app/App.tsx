@@ -98,12 +98,13 @@ export const App = (): JSX.Element => {
         component="main"
         sx={{
           flex: 1,
+          width: '100%',
           px: { xs: 2, md: 4 },
           py: { xs: 3, md: 4 },
           pt: { xs: 10, md: 4 },
         }}
       >
-        <Stack spacing={3.75}>
+        <Stack spacing={3.75} sx={{ width: '100%', maxWidth: '1360px', mx: 'auto' }}>
           <Stack
             direction={{ xs: 'column', md: 'row' }}
             justifyContent="space-between"
@@ -125,8 +126,8 @@ export const App = (): JSX.Element => {
                 {razaActual ? razaActual.nombre : 'Selecciona una raza'}
               </Typography>
               <Typography color="text.secondary" sx={{ maxWidth: 720 }}>
-                Una ficha moderna por raza con imagen principal, contexto historico y
-                descargas servidas desde el backend proxy.
+                Una ficha compacta por raza con imagen recortada, contexto esencial
+                y descargas servidas desde el backend proxy.
               </Typography>
             </Stack>
 

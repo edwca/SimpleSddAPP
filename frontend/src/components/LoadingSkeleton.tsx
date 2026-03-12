@@ -14,7 +14,7 @@ export const LoadingSkeleton = ({
           <Box
             key={indice}
             sx={{
-              borderRadius: 3,
+              borderRadius: '24px',
               bgcolor: 'rgba(255, 255, 255, 0.72)',
               p: 1.5,
             }}
@@ -41,11 +41,11 @@ export const LoadingSkeleton = ({
       <Box
         sx={{
           p: 2,
-          borderRadius: 6,
+          borderRadius: '28px',
           bgcolor: 'rgba(255,255,255,0.7)',
         }}
       >
-        <Skeleton variant="rounded" height={420} />
+        <Skeleton variant="rounded" height={360} />
         <Skeleton variant="text" height={32} sx={{ mt: 2 }} width="40%" />
         <Skeleton variant="text" height={22} width="58%" />
       </Box>
@@ -53,7 +53,7 @@ export const LoadingSkeleton = ({
       <Box
         sx={{
           p: 2.5,
-          borderRadius: 6,
+          borderRadius: '28px',
           bgcolor: 'rgba(255,255,255,0.76)',
         }}
       >

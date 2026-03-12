@@ -31,7 +31,7 @@ export const ImageViewerDialog = ({
       maxWidth="lg"
       PaperProps={{
         sx: {
-          borderRadius: 5,
+          borderRadius: '28px',
           overflow: 'hidden',
           background:
             'linear-gradient(180deg, rgba(14, 18, 30, 0.96) 0%, rgba(7, 10, 18, 0.94) 100%)',
@@ -92,7 +92,7 @@ export const ImageViewerDialog = ({
                   maxHeight: '78vh',
                   objectFit: 'contain',
                   objectPosition: 'center',
-                  borderRadius: 4,
+                  borderRadius: '24px',
                   boxShadow: '0 22px 60px rgba(0, 0, 0, 0.32)',
                 }}
               />

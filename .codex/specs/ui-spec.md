@@ -29,15 +29,17 @@
 - Carga de la imagen representativa desde el endpoint interno `featured-image`
 - Uso de `useDeferredValue` para suavizar la carga de contenido al cambiar de raza
 - Uso de `startTransition` para reducir bloqueo perceptible al cambiar la seleccion
-- Indicador lineal visible cuando la historia se esta refrescando
+- Indicador lineal visible cuando la historia se esta refrescando y spinner centrado mientras la imagen principal termina de cargar
 - Estados de carga, vacio y error para lista, spotlight e historia
 - Spotlight responsive con una columna en mobile y dos paneles en pantallas amplias
 - Dialogo modal de imagen con fondo oscuro y enlace para abrir la imagen original
+- La imagen principal se presenta con recorte uniforme y proporcion fija para mantener una ficha mas compacta y consistente
+- La tarjeta inferior de la imagen muestra un texto introductorio breve derivado de la historia o de los metadatos de la raza
 
 ## Lineamientos visuales
 
 - Inspiracion editorial minimalista con enfoque premium y limpio
 - Paleta principal basada en tonos pizarra, verde azulado y blancos translcidos
 - Tipografia `Sora` + `Manrope`
-- Bordes redondeados amplios, sombras suaves y transparencias ligeras
+- Bordes redondeados moderados, sombras suaves y transparencias ligeras
 - Transiciones cortas en sidebar, spotlight e interacciones de navegacion

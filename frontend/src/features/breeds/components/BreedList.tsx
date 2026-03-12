@@ -62,7 +62,7 @@ export const BreedList = ({
           sx={{
             alignItems: 'flex-start',
             mb: 0.75,
-            borderRadius: 3.5,
+            borderRadius: '28px',
             px: 2,
             py: 1.65,
             transition: 'transform 160ms ease, box-shadow 160ms ease',

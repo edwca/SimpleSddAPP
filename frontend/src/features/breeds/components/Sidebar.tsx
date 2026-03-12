@@ -82,7 +82,7 @@ export const Sidebar = ({
                 height: 46,
                 display: 'grid',
                 placeItems: 'center',
-                borderRadius: 3.5,
+                borderRadius: '28px',
                 bgcolor: 'rgba(248, 250, 252, 0.82)',
                 color: 'secondary.contrastText',
                 boxShadow: '0 18px 36px rgba(11, 18, 32, 0.12)',

@@ -2,6 +2,8 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+const normalizarOrigin = (origin: string): string => origin.trim().replace(/\/+$/, '');
+
 const leerNumero = (
   valor: string | undefined,
   valorPorDefecto: number,
@@ -27,7 +29,7 @@ export const env = {
   allowedOrigins: (process.env.ALLOWED_ORIGIN ||
     'http://localhost:5173,http://127.0.0.1:5173')
     .split(',')
-    .map((origin) => origin.trim())
+    .map(normalizarOrigin)
     .filter(Boolean),
   axiosTimeoutMs: 5000,
 };

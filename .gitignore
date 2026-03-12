@@ -1,0 +1,15 @@
+node_modules
+dist
+coverage
+playwright-report
+test-results
+tests/.features-gen
+.DS_Store
+.agents
+
+.env
+.env.local
+.env.*.local
+
+backend/dist
+frontend/dist

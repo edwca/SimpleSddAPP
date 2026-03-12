@@ -1,0 +1,38 @@
+:root {
+  font-family: "Sora", "Manrope", sans-serif;
+  color: #0c1526;
+  background:
+    radial-gradient(circle at top left, rgba(103, 232, 207, 0.2), transparent 28%),
+    linear-gradient(180deg, #eef4f3 0%, #edf2f8 52%, #f7fbfb 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: transparent;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 18% 22%, rgba(103, 232, 207, 0.18), transparent 22%),
+    radial-gradient(circle at 82% 10%, rgba(15, 118, 110, 0.12), transparent 18%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0));
+  opacity: 0.92;
+}
+
+#root {
+  min-height: 100vh;
+}

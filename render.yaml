@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: search-dog-backend
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build -w backend
+    startCommand: npm run start -w backend
+    envVars:
+      - key: API_BASE_URL
+        value: https://dog.ceo/api
+      - key: RATE_LIMIT_MAX
+        value: "100"
+      - key: ALLOWED_ORIGIN
+        sync: false

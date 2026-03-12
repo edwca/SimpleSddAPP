@@ -119,176 +119,132 @@ export const BreedSpotlight = ({
         mx: 'auto',
       }}
     >
-      <Paper
+      <Stack
+        spacing={2}
         sx={{
-          position: 'relative',
-          overflow: 'hidden',
           width: '100%',
           maxWidth: { xs: '100%', lg: '720px' },
-          minHeight: { xs: 300, md: 360 },
-          aspectRatio: { xs: '4 / 3', md: '5 / 4' },
           justifySelf: 'center',
-          borderRadius: '36px',
-          background:
-            'linear-gradient(160deg, rgba(6, 14, 25, 0.95) 0%, rgba(15, 118, 110, 0.72) 140%)',
-          boxShadow: '0 28px 72px rgba(11, 18, 32, 0.16)',
-          border: '1px solid rgba(255,255,255,0.14)',
         }}
       >
-        {imageUrl ? (
-          <>
-            <Box
-              component="img"
-              src={imageUrl}
-              alt={`Imagen principal de ${raza.nombre}`}
-              data-testid="featured-image"
-              onLoad={() => setImagenCargando(false)}
-              onError={() => {
-                setImagenCargando(false);
-                setImagenConError(true);
-              }}
-              sx={{
-                width: '100%',
-                height: '100%',
-                minHeight: { xs: 300, md: 360 },
-                objectFit: 'cover',
-                display: imagenConError ? 'none' : 'block',
-                transform: imagenCargando ? 'scale(1.035)' : 'scale(1)',
-                transition: 'transform 320ms ease, opacity 220ms ease',
-                opacity: imagenCargando ? 0.42 : 1,
-              }}
-            />
-            {imagenCargando ? (
-              <Stack
-                spacing={1.25}
-                justifyContent="center"
-                alignItems="center"
-                sx={{
-                  position: 'absolute',
-                  inset: 0,
-                  zIndex: 2,
-                  background: 'rgba(5, 9, 18, 0.34)',
-                  backdropFilter: 'blur(10px)',
-                  color: 'common.white',
-                }}
-              >
-                <CircularProgress color="secondary" thickness={4.6} />
-                <Typography
-                  variant="body2"
-                  sx={{ color: 'rgba(255,255,255,0.88)', letterSpacing: '0.02em' }}
-                >
-                  Cargando imagen principal...
-                </Typography>
-              </Stack>
-            ) : null}
-            <Box
-              sx={{
-                position: 'absolute',
-                inset: 0,
-                zIndex: 1,
-                background:
-                  'linear-gradient(180deg, rgba(5, 9, 18, 0.02) 18%, rgba(5, 9, 18, 0.78) 100%)',
-              }}
-            />
-          </>
-        ) : null}
-
-        {imagenConError || !imageUrl ? (
-          <Stack
-            spacing={1.2}
-            justifyContent="center"
-            alignItems="flex-start"
-            sx={{
-              height: '100%',
-              px: { xs: 2.5, md: 4 },
-              py: { xs: 3, md: 4 },
-              color: 'common.white',
-              position: 'relative',
-              zIndex: 2,
-            }}
-          >
-            <Typography variant="h4">Imagen no disponible</Typography>
-            <Typography sx={{ maxWidth: 440, color: 'rgba(255,255,255,0.78)' }}>
-              No fue posible cargar la imagen representativa de esta raza desde el
-              proxy interno.
-            </Typography>
-          </Stack>
-        ) : null}
-
-        <Stack
-          spacing={1.5}
+        <Paper
           sx={{
-            position: 'absolute',
-            left: { xs: 18, md: 24 },
-            right: { xs: 18, md: 24 },
-            bottom: { xs: 18, md: 24 },
-            zIndex: 3,
-            maxWidth: { xs: 'none', lg: '560px' },
-            px: { xs: 2, md: 2.5 },
-            py: { xs: 2, md: 2.5 },
-            color: 'common.white',
-            borderRadius: '28px',
+            position: 'relative',
+            overflow: 'hidden',
+            width: '100%',
+            minHeight: { xs: 300, md: 360 },
+            aspectRatio: { xs: '4 / 3', md: '5 / 4' },
+            borderRadius: '36px',
             background:
-              'linear-gradient(180deg, rgba(7, 12, 22, 0.38) 0%, rgba(7, 12, 22, 0.7) 100%)',
-            backdropFilter: 'blur(18px)',
-            border: '1px solid rgba(255,255,255,0.16)',
-            textAlign: { xs: 'left', md: 'center' },
-            alignItems: { xs: 'flex-start', md: 'center' },
+              'linear-gradient(160deg, rgba(6, 14, 25, 0.95) 0%, rgba(15, 118, 110, 0.72) 140%)',
+            boxShadow: '0 28px 72px rgba(11, 18, 32, 0.16)',
+            border: '1px solid rgba(255,255,255,0.14)',
           }}
         >
-          <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
-            <Chip
-              label="Imagen representativa"
-              sx={{
-                bgcolor: 'rgba(255,255,255,0.16)',
-                color: 'common.white',
-                backdropFilter: 'blur(18px)',
-              }}
-            />
-            {raza.subRazas.length > 0 ? (
-              <Chip
-                label={`${raza.subRazas.length} subraza(s)`}
+          {imageUrl ? (
+            <>
+              <Box
+                component="img"
+                src={imageUrl}
+                alt={`Imagen principal de ${raza.nombre}`}
+                data-testid="featured-image"
+                onLoad={() => setImagenCargando(false)}
+                onError={() => {
+                  setImagenCargando(false);
+                  setImagenConError(true);
+                }}
                 sx={{
-                  bgcolor: 'rgba(255,255,255,0.12)',
-                  color: 'rgba(255,255,255,0.88)',
+                  width: '100%',
+                  height: '100%',
+                  minHeight: { xs: 300, md: 360 },
+                  objectFit: 'cover',
+                  display: imagenConError ? 'none' : 'block',
+                  transform: imagenCargando ? 'scale(1.035)' : 'scale(1)',
+                  transition: 'transform 320ms ease, opacity 220ms ease',
+                  opacity: imagenCargando ? 0.42 : 1,
                 }}
               />
-            ) : null}
-          </Stack>
+              {imagenCargando ? (
+                <Stack
+                  spacing={1.25}
+                  justifyContent="center"
+                  alignItems="center"
+                  sx={{
+                    position: 'absolute',
+                    inset: 0,
+                    zIndex: 2,
+                    background: 'rgba(5, 9, 18, 0.34)',
+                    backdropFilter: 'blur(10px)',
+                    color: 'common.white',
+                  }}
+                >
+                  <CircularProgress color="secondary" thickness={4.6} />
+                  <Typography
+                    variant="body2"
+                    sx={{ color: 'rgba(255,255,255,0.88)', letterSpacing: '0.02em' }}
+                  >
+                    Cargando imagen principal...
+                  </Typography>
+                </Stack>
+              ) : null}
+            </>
+          ) : null}
 
-          <Stack
-            direction={{ xs: 'column', sm: 'row' }}
-            justifyContent="space-between"
-            alignItems={{ xs: 'flex-start', md: 'center' }}
-            spacing={1.5}
-            sx={{ width: '100%' }}
-          >
+          {imagenConError || !imageUrl ? (
             <Stack
-              spacing={0.75}
+              spacing={1.2}
+              justifyContent="center"
+              alignItems="flex-start"
               sx={{
-                flex: 1,
-                alignItems: { xs: 'flex-start', md: 'center' },
+                height: '100%',
+                px: { xs: 2.5, md: 4 },
+                py: { xs: 3, md: 4 },
+                color: 'common.white',
+                position: 'relative',
+                zIndex: 2,
               }}
             >
-              <Typography variant="h3" sx={{ color: 'common.white' }}>
-                {raza.nombre}
+              <Typography variant="h4">Imagen no disponible</Typography>
+              <Typography sx={{ maxWidth: 440, color: 'rgba(255,255,255,0.78)' }}>
+                No fue posible cargar la imagen representativa de esta raza desde el
+                proxy interno.
               </Typography>
-              <Typography
-                sx={{
-                  color: 'rgba(255,255,255,0.82)',
-                  maxWidth: 420,
-                }}
-              >
+            </Stack>
+          ) : null}
+        </Paper>
+
+        <Paper
+          sx={{
+            px: { xs: 2.5, md: 3 },
+            py: { xs: 2.5, md: 3 },
+            borderRadius: '28px',
+            background:
+              'linear-gradient(180deg, rgba(255,255,255,0.84) 0%, rgba(245,249,248,0.92) 100%)',
+            backdropFilter: 'blur(18px)',
+            border: '1px solid rgba(255,255,255,0.62)',
+            boxShadow: '0 18px 54px rgba(11, 18, 32, 0.08)',
+          }}
+        >
+          <Stack spacing={1.75}>
+            <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
+              <Chip label="Imagen representativa" color="secondary" variant="outlined" />
+              {raza.subRazas.length > 0 ? (
+                <Chip label={`${raza.subRazas.length} subraza(s)`} variant="outlined" />
+              ) : null}
+            </Stack>
+
+            <Stack spacing={0.75}>
+              <Typography variant="h3">{raza.nombre}</Typography>
+              <Typography color="text.secondary" sx={{ maxWidth: 520 }}>
                 {introDeRaza}
               </Typography>
             </Stack>
 
             <Stack
-              direction="row"
+              direction={{ xs: 'column', sm: 'row' }}
               spacing={1}
               flexWrap="wrap"
               useFlexGap
-              justifyContent={{ xs: 'flex-start', md: 'center' }}
             >
               <Button
                 variant="contained"
@@ -301,7 +257,7 @@ export const BreedSpotlight = ({
               </Button>
               <Button
                 variant="outlined"
-                color="inherit"
+                color="secondary"
                 startIcon={<OpenInFullRoundedIcon />}
                 disabled={!imageUrl || imagenConError}
                 onClick={() => {
@@ -310,16 +266,15 @@ export const BreedSpotlight = ({
                   }
                 }}
                 sx={{
-                  borderColor: 'rgba(255,255,255,0.32)',
-                  color: 'common.white',
+                  alignSelf: { xs: 'stretch', sm: 'flex-start' },
                 }}
               >
                 Ampliar
               </Button>
             </Stack>
           </Stack>
-        </Stack>
-      </Paper>
+        </Paper>
+      </Stack>
 
       <Paper
         sx={{

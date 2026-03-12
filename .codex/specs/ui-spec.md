@@ -34,7 +34,7 @@
 - Spotlight responsive con una columna en mobile y dos paneles en pantallas amplias
 - Dialogo modal de imagen con fondo oscuro y enlace para abrir la imagen original
 - La imagen principal se presenta con recorte uniforme y proporcion fija para mantener una ficha mas compacta y consistente
-- La tarjeta inferior de la imagen muestra un texto introductorio breve derivado de la historia o de los metadatos de la raza
+- Debajo de la imagen principal se muestra una tarjeta separada con nombre, acciones y un texto introductorio breve derivado de la historia o de los metadatos de la raza
 
 ## Lineamientos visuales
 
